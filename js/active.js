@@ -56,9 +56,9 @@
             asNavFor: '.slider-nav'
         });
         $('.slider-nav').slick({
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
-            speed: 500,
+            speed: 5000,
             asNavFor: '.slider-for',
             dots: true,
             centerMode: true,

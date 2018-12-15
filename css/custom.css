@@ -4,3 +4,4 @@
 .blue {background: #5b32b4;}
 a.blue > i, .blue p {color: #fff}
 .blue:hover {background-color: #fb397d;}
+#slides-wrapper {margin-left: 0;}
