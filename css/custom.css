@@ -45,7 +45,25 @@ a.blue>i,
     }
 }
 
+#mental {
+    background: url(../img/bg-img/mental2.png) no-repeat center;
+    background-size: cover;
+}
+#mental h2 {
+    font-size: 70px;
+}
+#mental h3 {
+    top: -160px;
+    font-size: 180px;
+}
+
 #russian {
     background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/mo.jpg) no-repeat fixed center;
     background-size: cover;
 }
+#russian h3{color: #000; opacity: .12;}
+#english {
+    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/english.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+#english h3{color: #000; opacity: .15;}
