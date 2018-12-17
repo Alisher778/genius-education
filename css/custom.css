@@ -1,13 +1,51 @@
-.big {font-size: 30px;}
-.pink {background-color: #fb397d;}
-.pink:hover {background-color: #5b32b4 !important;}
-.blue {background: #5b32b4;}
-a.blue > i, .blue p {color: #fff}
-.blue:hover {background-color: #fb397d;}
-#slides-wrapper {margin-left: 0;min-width: 100vw; display: flex; overflow: hidden;}
-#slides-wrapper section {transition: all 1s; min-width: 100vw; animation: fade 0.5s linear both}
-@keyframes fade{
-    from{opacity: 0.4;}
-    to{opacity: 1;}
+.big {
+    font-size: 30px;
 }
-#russian {background: url('../img/bg-img/rus2.png') no-repeat fixed center; background-size: cover;}
+
+.pink {
+    background-color: #fb397d;
+}
+
+.pink:hover {
+    background-color: #5b32b4 !important;
+}
+
+.blue {
+    background: #5b32b4;
+}
+
+a.blue>i,
+.blue p {
+    color: #fff
+}
+
+.blue:hover {
+    background-color: #fb397d;
+}
+
+#slides-wrapper {
+    margin-left: 0;
+    min-width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+#slides-wrapper section {
+    transition: all 1s;
+    min-width: 100vw;
+    animation: fade 0.5s linear both
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#russian {
+    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/mo.jpg) no-repeat fixed center;
+    background-size: cover;
+}
