@@ -10,3 +10,4 @@ a.blue > i, .blue p {color: #fff}
     from{opacity: 0.4;}
     to{opacity: 1;}
 }
+#russian {background: url('../img/bg-img/rus2.png') no-repeat fixed center; background-size: cover;}

@@ -30,4 +30,4 @@ function slide2() {
  
    
 }
-setInterval(slide2, 20000);
+setInterval(slide2, 3000);
