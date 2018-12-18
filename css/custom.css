@@ -27,7 +27,8 @@ a.blue>i,
     margin-left: 0;
     min-width: 100vw;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* height: 90vh; */
 }
 
 #slides-wrapper section {
@@ -67,4 +68,5 @@ a.blue>i,
     background-size: cover;
 }
 #english h3{color: #000; opacity: .15;}
+.slick-dots {margin-bottom: -60px;}
 .slick-dots li button {color: #000 !important;}
