@@ -1,22 +1,5 @@
 let     index = 0;
 const   parentSlide = document.querySelectorAll('#slides-wrapper section');
-const width = window.innerWidth;
-// function slide() {
-//     parentSlide.forEach(function(sec) {
-//         sec.style.display = 'none';
-//     });
-//     if(index<parentSlide.length) {
-//         parentSlide[index].style.display = 'block';
-//         index++;
-//     } else {
-//         parentSlide[0].style.display = 'block';
-//         index = 0;
-//     }
- 
-   
-// }
-
-// setInterval(slide, 2000);
 
 function slide2() {
     if(index<parentSlide.length) {
@@ -27,7 +10,16 @@ function slide2() {
         parentSlide[0].style.cssText = 'margin-left: 0; transition: 0';
         index = 0;
     }
- 
-   
 }
-setInterval(slide2, 3000);
+var startSlide = setInterval(slide2, 7000);
+
+document.querySelectorAll('.get-start-area').forEach(
+    function(el) {
+    el.addEventListener('mouseover', function() {
+        clearInterval(startSlide);
+    })
+
+    el.addEventListener('mouseout', function() {
+        setInterval(slide2, 7000);
+    })
+});
