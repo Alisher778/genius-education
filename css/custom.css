@@ -58,12 +58,13 @@ a.blue>i,
 }
 
 #russian {
-    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/mo.jpg) no-repeat fixed center;
+    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/mo.jpg) no-repeat center;
     background-size: cover;
 }
 #russian h3{color: #000; opacity: .12;}
 #english {
-    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/english.jpg) no-repeat fixed center;
+    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.29) 10%, rgba(20, 20, 21, 0.28) 100%), url(../img/bg-img/english.jpg) no-repeat center;
     background-size: cover;
 }
 #english h3{color: #000; opacity: .15;}
+.slick-dots li button {color: #000 !important;}

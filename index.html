@@ -12,9 +12,10 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
-
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"> -->
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
@@ -803,17 +804,28 @@
     <script src="js/plugins.js"></script>
     <!-- Slick Slider Js-->
     <script src="js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <!-- Footer Reveal JS -->
     <!-- <script src="js/footer-reveal.min.js"></script> -->
     <!-- Active JS -->
     <script src="js/active.js"></script>
-    <script src="js/custome.js"></script>
+    <!-- <script src="js/custome.js"></script> -->
     <script>
         $(document).ready(function() {
             $('.register').click(function() {
                 var target = document.querySelector('#scroll-contact').offsetTop;
                 console.log(target)
                 $('body, html').animate({scrollTop: target + 100}, 1000);
+            });
+
+            $('#slides-wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 15000,
+                dots: true,
+                infinite: true,
+                arrows: true,
             });
         })
     </script>

@@ -1,7 +1,9 @@
-let     index = 0;
+let     index = 1;
+let     slideDirection = 'right'
 const   parentSlide = document.querySelectorAll('#slides-wrapper section');
 
 function slide2() {
+    console.log(1)
     if(index<parentSlide.length) {
         const w = window.innerWidth*index;
         parentSlide[0].style.marginLeft = -w+'px';
@@ -10,8 +12,9 @@ function slide2() {
         parentSlide[0].style.cssText = 'margin-left: 0; transition: 0';
         index = 0;
     }
+    
 }
-var startSlide = setInterval(slide2, 7000);
+var startSlide = setInterval(slide2, 2000);
 
 document.querySelectorAll('.get-start-area').forEach(
     function(el) {
@@ -20,6 +23,6 @@ document.querySelectorAll('.get-start-area').forEach(
     })
 
     el.addEventListener('mouseout', function() {
-        setInterval(slide2, 7000);
+        setInterval(slide2, 2000);
     })
 });
