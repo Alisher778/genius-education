@@ -523,7 +523,7 @@
     <!-- ***** Cool Facts Area End ***** -->
 
     <!-- ***** Contact Us Area Start ***** -->
-    <section class="section_padding_100 clearfix">
+    <section class="section_padding_100 clearfix" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -610,11 +610,11 @@
         </div>
         <div class="footer-menu">
             <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="footer-links">
+                    <li><a href="#about" class="nav-link">Biz Haqimizda</a></li>
+                    <li><a href="#courses">Kurslar</a></li>
+                    <li><a href="#nega-biz">Nega Biz</a></li>
+                    <li><a href="#ota-onalarga-murojat">Ota-onalarga</a></li>
                 </ul>
             </nav>
         </div>
@@ -625,7 +625,9 @@
         </div>
     </footer>
     <!-- ***** Footer Area Start ***** -->
-
+    <div id="call-now">
+        <a href="tel:995558877"><i class="fa fa-phone text-white"></i></a>
+    </div>
     <!-- Jquery-2.2.4 JS -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -645,9 +647,9 @@
     <script>
         $(document).ready(function() {
             $('.register').click(function() {
-                var target = document.querySelector('#scroll-contact').offsetTop;
+                var target = document.querySelector('#contact').offsetTop;
                 console.log(target)
-                $('body, html').animate({scrollTop: target + 100}, 1000);
+                $('body, html').animate({scrollTop: target}, 1000);
             });
 
             $('#slides-wrapper').slick({
@@ -658,6 +660,24 @@
                 dots: true,
                 infinite: true,
                 arrows: true,
+            }); 
+
+            $(document).scroll(function() {
+                var scrollPosition = $(document).scrollTop();
+                var scrollTarget = $('#courses').position().top;
+                console.log(scrollPosition, scrollTarget)
+                if(scrollPosition > scrollTarget) {
+                    $('#call-now').fadeIn();
+                } else {
+                    $('#call-now').fadeOut();
+                }
+            });
+
+            $('#footer-links a').click(function() {
+                var link = $(this).attr('href');
+                var elPosition = $(link).position().top;
+                console.log(elPosition)
+                $('body, html').animate({scrollTop: elPosition}, 1000);
             });
         })
     </script>
