@@ -49,6 +49,7 @@
                             </button>
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
+                                <button id="close-nav"><i class="fa fa-times"></i></button>
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item"><a class="nav-link" href="#about">Markaz Haqida</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#courses">Kurslar</a></li>
@@ -57,7 +58,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#contact">Bog'lanish</a></li>
                                 </ul>
                                 <div class="d-lg-none">
-                                    <a href="tel:995558877"><i class="fa fa-phone-square text-light big"></i></a>
+                                    <a href="tel:995558877" id="nav-call-btn"><i class="fa fa-phone-square text-light big"></i></a>
                                 </div>
                             </div>
                         </nav>
@@ -681,12 +682,13 @@
                 $('body, html').animate({scrollTop: elPosition}, 1000);
             });
 
-            $('li.nav-item').click(function() {
+            $('li.nav-item, #close-nav').click(function() {
                 var width = $(window).width();
                 if(width < 992) {
                    $('#ca-navbar').removeClass('show')
                 }
-            })
+            });
+
         })
     </script>
 </body>
