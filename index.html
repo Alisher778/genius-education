@@ -668,7 +668,6 @@
             $(document).scroll(function() {
                 var scrollPosition = $(document).scrollTop();
                 var scrollTarget = $('#courses').position().top;
-                console.log(scrollPosition, scrollTarget)
                 if(scrollPosition > scrollTarget) {
                     $('#call-now').fadeIn();
                 } else {
@@ -679,9 +678,15 @@
             $('#footer-links a').click(function() {
                 var link = $(this).attr('href');
                 var elPosition = $(link).position().top;
-                console.log(elPosition)
                 $('body, html').animate({scrollTop: elPosition}, 1000);
             });
+
+            $('li.nav-item').click(function() {
+                var width = $(window).width();
+                if(width < 992) {
+                   $('#ca-navbar').removeClass('show')
+                }
+            })
         })
     </script>
 </body>
