@@ -86,3 +86,17 @@ a.blue>i,
     z-index: 9999;
     display: none;
 }
+.navbar-light .navbar-toggler {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    outline: none;
+}
+.navbar-toggler > span {
+    height: 3px;
+    width: 30px;
+    display: block;
+    margin: 5px auto;
+    border-radius: 3px;
+    background-color: #fff;
+    outline: none;
+}
