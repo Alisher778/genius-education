@@ -15,6 +15,9 @@
     display: inline-block;
 }
 #nav-call-btn i{ font-size: 44px;}
+.wellcome-heading p {
+    font-size: 20px;
+}
 .big {
     font-size: 30px;
 }
@@ -139,6 +142,7 @@ a.blue>i,
     #ca-navbar > ul {
         margin: 0 !important; 
     }
+    
     #ca-navbar.navbar-collapse.collapse.show {
         display: flex;
     }
@@ -157,5 +161,8 @@ a.blue>i,
     }
     a#scrollUp {
         z-index: 888 !important;
+    }
+    #slides-wrapper section {
+        text-align: center;
     }
 }

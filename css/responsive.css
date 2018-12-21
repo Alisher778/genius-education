@@ -137,6 +137,9 @@
     .header_area {
         top: 0;
     }
+    #slides-wrapper section {
+        text-align: center;
+    }
     .welcome_text .cd-intro > p {
         font-size: 14px;
     }
@@ -223,6 +226,9 @@
     }
     .cool_facts_area .col-12:last-of-type .single-cool-fact {
         margin-bottom: 0;
+    }
+    .get-started-button, .membership-description {
+        text-align: center;
     }
 }
 
