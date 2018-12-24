@@ -8,11 +8,36 @@
     display: none;
 }
 .header_area.sticky {background: rgb(79, 25, 149)}
+/* .header_area.sticky .navbar {height: 50px;} */
 .menu_area #nav .nav-link {font-size: 18px;}
 #close-nav i{color: #fff; font-size: 34px; cursor: pointer;}
 #nav-call-btn {
     margin-top: 7px;
     display: inline-block;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+#logo-link img {
+    position: relative;
+    top: -5px;
+    height: 55px;
+}
+#logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 5px;
+}
+#logo-text i {
+    font-size: 12px;
+    line-height: 1.7;
+}
+#logo-text strong {
+    border-bottom: 1px solid;
+    line-height: 1.3;
 }
 #nav-call-btn i{ font-size: 44px;}
 .wellcome-heading p {
