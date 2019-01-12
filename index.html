@@ -64,7 +64,9 @@
                                     <li class="nav-item"><a class="nav-link" href="#contact">Bog'lanish</a></li>
                                 </ul>
                                 <div class="d-lg-none">
-                                    <a href="tel:995558877" id="nav-call-btn"><i class="fa fa-phone-square text-light big"></i></a>
+                                    <a href="tel:995558877" id="nav-call-btn" class="d-block"><i class="fa fa-phone-square text-light big"></i></a>
+                                    <a href="/" class="d-block my-2"><img src="img/uz.svg" alt="uz" width="50"></a>
+                                    <a href="/ru" class="d-block"><img src="img/ru.svg" alt="ru" width="50"></a>
                                 </div>
                             </div>
                         </nav>
@@ -72,8 +74,12 @@
                 </div>
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-lg-flex align-items-center justify-content-center">
                         <a href="tel:995558877"><i class="fa fa-phone-square text-light big"></i></a>
+                        <div class="ml-4">
+                            <a href="/" class="text-white mr-2">UZ</a>
+                            <a href="/ru" class="text-white">RU</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -609,23 +615,16 @@
 
     <!-- ***** Footer Area Start ***** -->
     <footer class="footer-social-icon text-center clearfix">
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBdgLaG9WHgM_YIatKpCNOzqUWYSXaBUWA'></script>
-        <div style='overflow:hidden;height:400px;width:100%;'>
-            <div id='gmap_canvas' style='height:400px;width:100%;'></div>
-            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-        </div> <a href='https://add-map.com/'>how do i add a google map to my website</a>
-        <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c3e35c7ad53a777ce18bf1244c43e15aac276858'></script>
-        <script type='text/javascript'>function init_map() { var myOptions = { zoom: 13, center: new google.maps.LatLng(40.14012721360164, 67.86006610455279), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(40.14012721360164, 67.86006610455279) }); infowindow = new google.maps.InfoWindow({ content: '<strong>Genius Education</strong><br><br> jizzakh<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0dfc25af1f8fcfab55a1b620ad3d3382a2c8c9e5cca6f4a73e386828e3e52497&amp;width=100%&amp;height=400&amp;lang=en_FR&amp;scroll=true"></script>
         <!-- footer logo -->
         <div class="footer-text">
             <h2><img src="img/logo-blue.svg" alt="" style="width: 100px;"></h2>
         </div>
         <!-- social icon-->
         <div class="footer-social-icon">
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/geniusstareducation/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://t.me/genius_start"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/genius.star/"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
         <div class="footer-menu">
             <nav>
@@ -640,7 +639,7 @@
         <!-- Foooter Text-->
         <div class="copyright-text">
             <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-            <p>Copyright ©2018 Made by <a href="//alitech.uz" target="_blank">Alitech</a></p>
+            <p>Copyright ©2018 - 2019 Made by <a href="//alitech.uz" target="_blank">Alitech</a></p>
         </div>
     </footer>
     <!-- ***** Footer Area Start ***** -->
