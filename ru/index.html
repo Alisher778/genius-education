@@ -64,7 +64,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#contact">Bog'lanish</a></li>
                                 </ul>
                                 <div class="d-lg-none">
-                                    <a href="tel:995558877" id="nav-call-btn" class="d-block"><i class="fa fa-phone-square text-light big"></i></a>
+                                    <a href="tel:955046667" id="nav-call-btn" class="d-block"><i class="fa fa-phone-square text-light big"></i></a>
                                     <a href="/" class="d-block my-2"><img src="../img/uz.svg" alt="uz" width="50"></a>
                                     <a href="/ru" class="d-block"><img src="../img/ru.svg" alt="ru" width="50"></a>
                                 </div>
@@ -75,7 +75,7 @@
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
                     <div class="d-none d-lg-flex align-items-center justify-content-center">
-                        <a href="tel:995558877"><i class="fa fa-phone-square text-light big"></i></a>
+                        <a href="tel:955046667"><i class="fa fa-phone-square text-light big"></i></a>
                         <div class="ml-4">
                             <a href="/" class="text-white mr-2">UZ</a>
                             <a href="/ru" class="text-white">RU</a>
@@ -191,9 +191,9 @@
                                     </div>
                                     <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
                                         <!-- Apple Store Btn -->
-                                        <a href="tel:995558877" class="blue">
+                                        <a href="tel:955046667" class="blue">
                                             <i class="fa fa-phone"></i>
-                                            <p class="mb-0"><span>99 555-88-77</span>Qo'ng'iroq Qil</p>
+                                            <p class="mb-0"><span>(95) 504-66-67</span>Qo'ng'iroq Qil</p>
                                         </a>
                                     </div>
                                 </div>
@@ -557,7 +557,7 @@
                         <p><span>Адрес:</span> Zargarlik mahallasi, Shohjaxon savdo do’koni 2 qavat</p>
                     </div>
                     <div class="phone-text">
-                        <p><span>Phone:</span> 99 555-88-77</p>
+                        <p><span>Phone:</span> (95) 504-66-67</p>
                     </div>
                     <div class="email-text">
                         <p><span>Email:</span> info@genius.uz</p>
@@ -566,7 +566,7 @@
                 <div class="col-md-6">
                     <!-- Form Start-->
                     <div class="contact_from">
-                        <form action="#" method="post">
+                        <form method="post" id="user-form">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -637,7 +637,7 @@
     </footer>
     <!-- ***** Footer Area Start ***** -->
     <div id="call-now">
-        <a href="tel:995558877"><i class="fa fa-phone text-white"></i></a>
+        <a href="tel:955046667"><i class="fa fa-phone text-white"></i></a>
     </div>
     <!-- Jquery-2.2.4 JS -->
     <script src="../js/jquery-2.2.4.min.js"></script>
@@ -652,7 +652,10 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
     <!-- Active JS -->
     <script src="../js/active.js"></script>
-    <!-- <script src="../js/custome.js"></script> -->
+    <!-- <script src="js/custome.js"></script> -->
+
+    <!-- SweetAlert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" async></script>
     <script>
         $(document).ready(function () {
             $('.register').click(function () {
@@ -660,6 +663,45 @@
                 console.log(target)
                 $('body, html').animate({ scrollTop: target }, 1000);
             });
+            $('#slides-wrapper').on('click', '.register',function () {
+                var target = document.querySelector('#contact').offsetTop;
+                console.log(target)
+                $('body, html').animate({ scrollTop: target }, 1000);
+            });
+
+            $('#user-form').submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: '/mail.php',
+                    type: 'post',
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        if(data == 'true') {
+                            swal({
+                                title: "Rahmat!",
+                                text: "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.",
+                                icon: "success",
+                                button: "X",
+                            })
+                            var inputs = document.querySelectorAll('#user-form input, #user-form textarea');
+                            inputs.forEach(function(item) {
+                                item.value = ""
+                            })
+                        }  else {
+                            swal({
+                                title: "Hatolik!",
+                                text: "Kutilmagan hatolik yuz berdi.",
+                                icon: "error",
+                                button: "X",
+                            })
+                        }
+                    },
+                    error: function(err) {
+                            swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
+                    }
+                })
+            })
 
             $('#slides-wrapper').slick({
                 slidesToShow: 1,

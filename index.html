@@ -64,7 +64,7 @@
                                     <li class="nav-item"><a class="nav-link" href="#contact">Bog'lanish</a></li>
                                 </ul>
                                 <div class="d-lg-none">
-                                    <a href="tel:995558877" id="nav-call-btn" class="d-block"><i class="fa fa-phone-square text-light big"></i></a>
+                                    <a href="tel:955046667" id="nav-call-btn" class="d-block"><i class="fa fa-phone-square text-light big"></i></a>
                                     <a href="/" class="d-block my-2"><img src="img/uz.svg" alt="uz" width="50"></a>
                                     <a href="/ru" class="d-block"><img src="img/ru.svg" alt="ru" width="50"></a>
                                 </div>
@@ -75,7 +75,7 @@
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
                     <div class="d-none d-lg-flex align-items-center justify-content-center">
-                        <a href="tel:995558877"><i class="fa fa-phone-square text-light big"></i></a>
+                        <a href="tel:955046667"><i class="fa fa-phone-square text-light big"></i></a>
                         <div class="ml-4">
                             <a href="/" class="text-white mr-2">UZ</a>
                             <a href="/ru" class="text-white">RU</a>
@@ -193,9 +193,9 @@
                                     </div>
                                     <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
                                         <!-- Apple Store Btn -->
-                                        <a href="tel:995558877" class="blue">
+                                        <a href="tel:955046667" class="blue">
                                             <i class="fa fa-phone"></i>
-                                            <p class="mb-0"><span>99 555-88-77</span>Qo'ng'iroq Qil</p>
+                                            <p class="mb-0"><span>(95) 504-66-67</span>Qo'ng'iroq Qil</p>
                                         </a>
                                     </div>
                                 </div>
@@ -564,7 +564,7 @@
                         <p><span>Manzil:</span> Zargarlik mahallasi, Shohjaxon savdo do’koni 2 qavat</p>
                     </div>
                     <div class="phone-text">
-                        <p><span>Phone:</span> 99 555-88-77</p>
+                        <p><span>Phone:</span> (95) 504-66-67</p>
                     </div>
                     <div class="email-text">
                         <p><span>Email:</span> info@genius.uz</p>
@@ -644,7 +644,7 @@
     </footer>
     <!-- ***** Footer Area Start ***** -->
     <div id="call-now">
-        <a href="tel:995558877"><i class="fa fa-phone text-white"></i></a>
+        <a href="tel:955046667"><i class="fa fa-phone text-white"></i></a>
     </div>
     <!-- Jquery-2.2.4 JS -->
     <script src="js/jquery-2.2.4.min.js"></script>
@@ -702,12 +702,14 @@
                                 icon: "error",
                                 button: "X",
                             })
+                            var inputs = document.querySelectorAll('#user-form input, #user-form textarea');
+                            inputs.forEach(function(item) {
+                                item.value = ""
+                            })
                         }
                     },
                     error: function(err) {
-                        if(data == "false") {
-                            swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
-                        }
+                        swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
                     }
                 })
             })
