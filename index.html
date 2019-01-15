@@ -660,13 +660,44 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     <!-- <script src="js/custome.js"></script> -->
+
+    <!-- SweetAlert JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" async></script>
     <script>
         $(document).ready(function () {
             $('.register').click(function () {
                 var target = document.querySelector('#contact').offsetTop;
                 console.log(target)
                 $('body, html').animate({ scrollTop: target }, 1000);
+                swal('Rahmat!', "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.", "success")
             });
+            $('#slides-wrapper').on('click', '.register',function () {
+                var target = document.querySelector('#contact').offsetTop;
+                console.log(target)
+                $('body, html').animate({ scrollTop: target }, 1000);
+            });
+
+            $('#user-form').submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'post',
+                    data: $(this).serialize(),
+                    success: function(data) {
+                        if(data == 'true') {
+                            swal('Rahmat!', "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.", "success")
+                        }  else {
+                            swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
+                        }
+                    },
+                    error: function(err) {
+                        if(data == "false") {
+                            swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
+                        }
+                    }
+                })
+            })
 
             $('#slides-wrapper').slick({
                 slidesToShow: 1,
