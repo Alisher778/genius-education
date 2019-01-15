@@ -669,7 +669,6 @@
                 var target = document.querySelector('#contact').offsetTop;
                 console.log(target)
                 $('body, html').animate({ scrollTop: target }, 1000);
-                swal('Rahmat!', "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.", "success")
             });
             $('#slides-wrapper').on('click', '.register',function () {
                 var target = document.querySelector('#contact').offsetTop;
@@ -686,9 +685,19 @@
                     data: $(this).serialize(),
                     success: function(data) {
                         if(data == 'true') {
-                            swal('Rahmat!', "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.", "success")
+                            swal({
+                                title: "Rahmat!",
+                                text: "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.",
+                                icon: "success",
+                                button: "X",
+                            })
                         }  else {
-                            swal('Hatolik!', "Kutilmagan hatolik yuz berdi.", "error")
+                            swal({
+                                title: "Hatolik!",
+                                text: "Kutilmagan hatolik yuz berdi.",
+                                icon: "error",
+                                button: "X",
+                            })
                         }
                     },
                     error: function(err) {

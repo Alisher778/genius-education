@@ -1,3 +1,6 @@
+.swal-button {
+    background: #8BC34A;
+}
 #scrollUp {z-index: 9999;}
 #close-nav {
     background: transparent; 
@@ -193,4 +196,5 @@ a.blue>i,
     #slides-wrapper section {
         text-align: center;
     }
+
 }
