@@ -573,7 +573,7 @@
                 <div class="col-md-6">
                     <!-- Form Start-->
                     <div class="contact_from">
-                        <form action="#" method="post">
+                        <form method="post" id="user-form">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -690,6 +690,10 @@
                                 text: "Arizangiz qabul qilindi. Siz bilan tez orada bog'lanamiz.",
                                 icon: "success",
                                 button: "X",
+                            })
+                            var inputs = document.querySelectorAll('#user-form input, #user-form textarea');
+                            inputs.forEach(function(item) {
+                                item.value = ""
                             })
                         }  else {
                             swal({
