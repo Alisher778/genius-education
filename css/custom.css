@@ -290,4 +290,10 @@ a.blue>i,
         font-size: 28px;
         text-align: center;
     }
+    .section-heading {
+        margin-bottom: 30px;
+    }
+    .footer-text>p {
+        margin-bottom: 0;
+    }
 }
