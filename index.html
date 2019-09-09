@@ -795,10 +795,10 @@
                 }, 1000);
             });
             $('#slides-wrapper').on('click', '.register', function() {
-                var target = document.querySelector('#contact').offsetTop + 200;
+                var target = document.querySelector('#contact').offsetTop;
                 console.log(target, 'clicked')
                 $('body, html').animate({
-                    scrollTop: target
+                    scrollTop: target + 30
                 }, 1000);
             });
 

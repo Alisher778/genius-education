@@ -291,7 +291,10 @@ a.blue>i,
         text-align: center;
     }
     .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+    .footer-text {
+        margin-bottom: 0;
     }
     .footer-text>p {
         margin-bottom: 0;
